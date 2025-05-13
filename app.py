@@ -10,7 +10,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
 # Setting The GPT Title
-st.set_page_config(page_title="PrivateGPT")
+st.set_page_config(page_title="FlashGPT")
 
 ssl._create_default_https_context = ssl._create_unverified_context
 nltk.data.path.append(os.path.abspath("nltk_data"))
@@ -50,7 +50,7 @@ counter = 0
 
 def main():
     global counter
-    st.title("PrivateGPT")
+    st.title("FlashGPT")
 
     # Logo 
     st.sidebar.markdown(
@@ -60,7 +60,7 @@ def main():
         text-align: center;
     }
     </style>
-    <h2 class="logo">PrivateGPT</h2>
+    <h2 class="logo">FlashGPT</h2>
     """,
     unsafe_allow_html=True
 )
@@ -80,7 +80,7 @@ def main():
                 csv_writer.writerow(['User Input', 'Chatbot Response', 'Timestamp'])
 
         counter += 1
-        user_input = st.text_input("You:", key=f"user_input_{counter}", placeholder="Message PrivateGPT")
+        user_input = st.text_input("You:", key=f"user_input_{counter}", placeholder="Message FlashGPT")
 
         if user_input:
 
